@@ -2,15 +2,14 @@
 
 // Add Event Listeners here:
 function addHoverListeners () {
-  $('.cell').hover(event => {
-    $(event.target).addClass('active');
+  $('.grid').on('mouseenter', '.cell', function (event) {
+    $(this).addClass('active');
   });
 }
 
 function addResetGridHandler() {
   $('.controls button').click(event => {
     createAndPlaceRows(8);
-    addHoverListeners();
   });
 }
 
